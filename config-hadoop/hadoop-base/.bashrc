@@ -115,8 +115,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
-export HADOOP_HOME=/home/hadoopminhquang/hadoop
+export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-arm64
+export HADOOP_HOME=/home/hadoopquocduc/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
 export HADOOP_MAPRED_HOME=$HADOOP_HOME

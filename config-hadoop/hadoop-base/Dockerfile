@@ -8,11 +8,11 @@ RUN echo "root:root" | chpasswd
 
 # Update and install required packages
 RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y openjdk-8-jdk wget ssh openssh-server dos2unix vim sudo telnet iputils-ping && \
+    apt-get install -y openjdk-11-jdk wget ssh openssh-server dos2unix vim sudo telnet iputils-ping && \
     apt-get clean
 
 # Set environment variables
-ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-arm64
+ENV JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-arm64
 ENV HADOOP_HOME=/home/hadoopquocduc/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$JAVA_HOME/bin
 
@@ -32,7 +32,7 @@ RUN wget https://dlcdn.apache.org/hadoop/common/hadoop-3.4.1/hadoop-3.4.1.tar.gz
     rm hadoop-3.4.1.tar.gz
 
 # Set JAVA_HOME in hadoop-env.sh
-RUN echo "export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-arm64" >> /home/hadoopquocduc/hadoop/etc/hadoop/hadoop-env.sh
+RUN echo "export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-arm64" >> /home/hadoopquocduc/hadoop/etc/hadoop/hadoop-env.sh
     
 
 # Copy Hadoop configuration files
