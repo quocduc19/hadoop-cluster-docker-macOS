@@ -26,7 +26,7 @@ By default, running the command below will launch a Hadoop cluster with 3 nodes 
 If you want to customize the number of slave nodes, specify the total number of nodes (master + slaves) as an argument.
 For example, to start a cluster with 1 master and 5 slaves (6 nodes total):
 ```sh
-./linux/start-cluster.sh 6
+./macOS/start-cluster.sh 6
 ```
 
 ##### 4. Verify the Installation
